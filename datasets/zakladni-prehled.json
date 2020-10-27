@@ -1,0 +1,2 @@
+{"index": {"_index": "zakladni-prehled", "_type": "zakladni-prehled"}}
+{"datum": "2020-10-27", "provedene_testy_celkem": 2118316, "potvrzene_pripady_celkem": 277215, "aktivni_pripady": 170528, "vyleceni": 104170, "umrti": 2517, "aktualne_hospitalizovani": 6191, "provedene_testy_vcerejsi_den": 34946, "potvrzene_pripady_vcerejsi_den": 10273, "potvrzene_pripady_dnesni_den": 8845, "provedene_testy_vcerejsi_den_datum": "2020-10-26", "potvrzene_pripady_vcerejsi_den_datum": "2020-10-26", "potvrzene_pripady_dnesni_den_datum": "2020-10-27"}

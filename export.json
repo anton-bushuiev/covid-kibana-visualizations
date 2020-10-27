@@ -1,0 +1,140 @@
+[
+  {
+    "_id": "c114dea0-189b-11eb-9be8-37746b0f1815",
+    "_type": "dashboard",
+    "_source": {
+      "title": "dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":5,\"i\":\"1\",\"w\":7,\"x\":0,\"y\":0},\"id\":\"bd753cf0-188b-11eb-9be8-37746b0f1815\",\"panelIndex\":\"1\",\"title\":\"Základní přehled\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"gridData\":{\"h\":4,\"i\":\"2\",\"w\":5,\"x\":7,\"y\":0},\"id\":\"82fd5b00-187e-11eb-9be8-37746b0f1815\",\"panelIndex\":\"2\",\"title\":\"Přehled pomůcek\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"gridData\":{\"h\":4,\"i\":\"3\",\"w\":5,\"x\":7,\"y\":4},\"id\":\"4c3491d0-1886-11eb-9be8-37746b0f1815\",\"panelIndex\":\"3\",\"title\":\"Přehled pomůcek\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"gridData\":{\"h\":3,\"i\":\"4\",\"w\":6,\"x\":6,\"y\":12},\"id\":\"95a835e0-1888-11eb-9be8-37746b0f1815\",\"panelIndex\":\"4\",\"title\":\"Nakažených/vyléčených/umrtí\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"gridData\":{\"h\":7,\"i\":\"5\",\"w\":6,\"x\":0,\"y\":8},\"id\":\"2b8ff750-188e-11eb-9be8-37746b0f1815\",\"panelIndex\":\"5\",\"title\":\"Evoluce počtu nakažených podle krajů\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"gridData\":{\"h\":3,\"i\":\"8\",\"w\":7,\"x\":0,\"y\":5},\"id\":\"a41a0ab0-1881-11eb-9be8-37746b0f1815\",\"panelIndex\":\"8\",\"title\":\"Přehled osob nakažených v zahraničí\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"embeddableConfig\":{\"mapCenter\":[49.86277585341321,15.556640625000002],\"mapZoom\":7},\"gridData\":{\"h\":4,\"i\":\"9\",\"w\":6,\"x\":6,\"y\":8},\"id\":\"369b4df0-189a-11eb-9be8-37746b0f1815\",\"panelIndex\":\"9\",\"title\":\"Kumulativní počet nakažených dle krajů\",\"type\":\"visualization\",\"version\":\"6.2.4\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4c3491d0-1886-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "pomucky_words",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"množství\",\"field\":\"mnozstvi\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"COVID-19: Přehled distribuce ochranného materiálu\",\"field\":\"pomucka.keyword\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":20},\"schema\":\"segment\",\"type\":\"terms\"}],\"params\":{\"hideLabel\":true,\"maxFontSize\":72,\"minFontSize\":18,\"orientation\":\"single\",\"scale\":\"linear\"},\"title\":\"pomucky_words\",\"type\":\"tagcloud\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"689cb090-187d-11eb-9be8-37746b0f1815\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "82fd5b00-187e-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "pomucky_prehled",
+      "visState": "{\"title\":\"pomucky_prehled\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"mnozstvi\",\"customLabel\":\"množství\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"pomucka.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"pomůcka\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"689cb090-187d-11eb-9be8-37746b0f1815\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "2b8ff750-188e-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "kraje-evoluce",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"field\":\"kraj.keyword\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":15},\"schema\":\"viewBy\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"datum\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"timeSplit\",\"type\":\"date_histogram\"}],\"params\":{\"alphabetSortLaneLabels\":\"off\",\"interval\":{\"description\":\"day\",\"display\":\"Auto\",\"val\":\"auto\"},\"showLegend\":true,\"thresholdBands\":[{\"color\":\"#36A33A\",\"value\":0},{\"color\":\"#4BAA3A\",\"value\":3},{\"color\":\"#61B13B\",\"value\":25},{\"color\":\"#76B83B\",\"value\":50},{\"color\":\"#8CBF3C\",\"value\":75},{\"color\":\"#A1C63C\",\"value\":100},{\"color\":\"#B7CD3D\",\"value\":200},{\"color\":\"#CCD43D\",\"value\":300},{\"color\":\"#E2DB3E\",\"value\":400},{\"color\":\"#F7E23E\",\"value\":500},{\"color\":\"#F7E23E\",\"value\":600},{\"color\":\"#F8CE3C\",\"value\":700},{\"color\":\"#F8BA3B\",\"value\":800},{\"color\":\"#F9A739\",\"value\":900},{\"color\":\"#F99338\",\"value\":1000},{\"color\":\"#FA7F36\",\"value\":1100},{\"color\":\"#FA6B35\",\"value\":1200},{\"color\":\"#FB5833\",\"value\":1300},{\"color\":\"#FB4432\",\"value\":1400},{\"color\":\"#FC3030\",\"value\":1500}],\"tooltipNumberFormat\":\"0.0\",\"unknownThresholdColor\":\"#e6e6e6\"},\"title\":\"kraje-evoluce\",\"type\":\"ml_swimlane\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7f59e160-1871-11eb-9be8-37746b0f1815\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "bd753cf0-188b-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "zakladni_prehled",
+      "visState": "{\"title\":\"zakladni_prehled\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":38}}},\"aggs\":[{\"id\":\"10\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"datum\",\"customLabel\":\"datum\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"aktivni_pripady\",\"customLabel\":\"aktivní případy\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"aktualne_hospitalizovani\",\"customLabel\":\"aktuálně hospitalizování\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"potvrzene_pripady_celkem\",\"customLabel\":\"potvrzené případy celkem\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"potvrzene_pripady_dnesni_den\",\"customLabel\":\"potvrzené případy dnešní den\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"provedene_testy_celkem\",\"customLabel\":\"provedené testy celkem\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"provedene_testy_vcerejsi_den\",\"customLabel\":\"provedené testy včerejší den\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"potvrzene_pripady_vcerejsi_den\",\"customLabel\":\"potvrzené případy včerejší den\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"umrti\",\"customLabel\":\"umrtí\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"vyleceni\",\"customLabel\":\"vyléčení\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"4c8801a0-1889-11eb-9be8-37746b0f1815\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "95a835e0-1888-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "kraj_okres_nakazeni_vyleceni_umrti",
+      "visState": "{\"title\":\"kraj_okres_nakazeni_vyleceni_umrti\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=kraj-okres-nakazeni-vyleceni-umrti,timefield=datum,metric=sum:kumulativni_pocet_nakazenych).label(label=\\\"Počet nakažených\\\").color(color=\\\"red\\\"),\\n.es(index=kraj-okres-nakazeni-vyleceni-umrti,timefield=datum,metric=sum:kumulativni_pocet_vylecenych).label(label=\\\"Počet vyléčených\\\").color(color=\\\"green\\\"),\\n.es(index=kraj-okres-nakazeni-vyleceni-umrti,timefield=datum,metric=sum:kumulativni_pocet_umrti).label(label=\\\"Počet umrtí\\\").color(color=\\\"black\\\")\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "369b4df0-189a-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "map_kumulativni_pocet_nakazenych_dle_kraju",
+      "visState": "{\"title\":\"map_kumulativni_pocet_nakazenych_dle_kraju\",\"type\":\"region_map\",\"params\":{\"addTooltip\":true,\"colorSchema\":\"Yellow to Red\",\"isDisplayWarning\":true,\"legendPosition\":\"bottomright\",\"mapCenter\":[0,0],\"mapZoom\":2,\"outlineWeight\":1,\"selectedJoinField\":{\"description\":\"ISO-3166-2 identifier\",\"name\":\"iso_3166_2\"},\"selectedLayer\":{\"attribution\":\"<p><a href=\\\"https://www.openstreetmap.org/copyright\\\">&#169; OpenStreetMap contributors</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"created_at\":\"2019-09-09T14:36:27.090606\",\"fields\":[{\"description\":\"ISO-3166-2 identifier\",\"name\":\"iso_3166_2\"},{\"description\":\"Subdivision name (English)\",\"name\":\"label_en\"},{\"description\":\"Subdivision name (Czech)\",\"name\":\"label_cs\"}],\"format\":{\"type\":\"geojson\"},\"id\":1568039810808655,\"layerId\":\"elastic_maps_service.Czechia Regions\",\"name\":\"Czechia Regions\",\"tags\":[],\"url\":\"https://vector.maps.elastic.co/blob/1568039810808655?elastic_tile_service_tos=agree&my_app_version=6.2.4\",\"weight\":0},\"showAllShapes\":true,\"wms\":{\"baseLayersAreLoaded\":{},\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"selectedTmsLayer\":{\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"id\":\"road_map\",\"maxZoom\":10,\"minZoom\":0,\"subdomains\":[],\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.2.4\"},\"tmsLayers\":[{\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"id\":\"road_map\",\"maxZoom\":10,\"minZoom\":0,\"subdomains\":[],\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.2.4\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"počet nakažených\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"kraj_nuts_kod.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"mapCenter\":[49.869857346128846,15.650024414062502],\"mapZoom\":8}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7f59e160-1871-11eb-9be8-37746b0f1815\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a41a0ab0-1881-11eb-9be8-37746b0f1815",
+    "_type": "visualization",
+    "_source": {
+      "title": "prehled_osob_nakazenych_v_zahranici",
+      "visState": "{\"title\":\"prehled_osob_nakazenych_v_zahranici\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"legendPosition\":\"right\",\"orderBucketsBySum\":true,\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"počet nakažených\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"počet nakažených\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"počet nakažených\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"nakaza_zeme_csu_kod.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"kód země\",\"row\":false}},{\"id\":\"3\",\"enabled\":true,\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"vek\",\"ranges\":[{\"from\":0,\"to\":18},{\"from\":18,\"to\":25},{\"from\":25,\"to\":40},{\"from\":40,\"to\":60},{\"from\":60,\"to\":100}],\"customLabel\":\"věk\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"pohlavi.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"pohlaví\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7f59e160-1871-11eb-9be8-37746b0f1815\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"nakaza_v_zahranici: true\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]
